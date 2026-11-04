@@ -4,6 +4,7 @@ import com.algaworks.algashop.billing.domain.model.invoce.PaymentMethod;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Objects;
 import java.util.UUID;

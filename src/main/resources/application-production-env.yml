@@ -1,0 +1,24 @@
+server.port: 8082
+
+spring:
+  datasource:
+    url: ${DATASOURCE_JDBC_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+  jpa:
+    show-sql: false
+  flyway:
+    enabled: false
+    locations: classpath:db/migration
+    user: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+    url: ${DATASOURCE_JDBC_URL}
+
+algashop:
+  integrations:
+    payment:
+      provider: FASTPAY #FAKE
+      fastpay:
+        hostname: {$FASTPAY_URL}
+        private-token: SSEewtC6Ps5yJLdB6SJmh1bqJXgRbCdf8ocDj2hU
+        webhook-url: {$WEBHOOK_FASTPAY_URL}
