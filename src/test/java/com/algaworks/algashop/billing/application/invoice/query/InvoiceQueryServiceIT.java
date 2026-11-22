@@ -1,5 +1,7 @@
 package com.algaworks.algashop.billing.application.invoice.query;
 
+import com.algaworks.algashop.billing.application.AbstractApplicationIT;
+
 import com.algaworks.algashop.billing.domain.model.invoce.Invoice;
 import com.algaworks.algashop.billing.domain.model.invoce.InvoiceRepository;
 import com.algaworks.algashop.billing.domain.model.invoce.PaymentMethod;
@@ -7,12 +9,8 @@ import com.algaworks.algashop.billing.domain.model.invoice.InvoiceTestDataBuilde
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
 
-@SpringBootTest
-@Transactional
-class InvoiceQueryServiceIT {
+class InvoiceQueryServiceIT extends AbstractApplicationIT {
 
     @Autowired
     private InvoiceQueryService invoiceQueryService;
